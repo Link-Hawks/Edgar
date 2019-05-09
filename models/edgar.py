@@ -15,7 +15,9 @@ class Edgar:
                 {
                     'import_path': 'chatterbot.logic.BestMatch',
                 }
-            ]
+            ],
+            storage_adapter='chatterbot.storage.MongoDatabaseAdapter',
+            database_uri='mongodb://localhost:27017/chatterbot-database'
         )
         self.__resposta = None
         self.idade = 0
