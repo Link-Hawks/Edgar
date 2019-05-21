@@ -1,7 +1,6 @@
 import logging
 from os import system
 
-from DAO.afirmacaoDAO import AfirmacaoDAO
 from controllers.botController import BotController
 from models.edgar import Edgar
 from models.usuario import Usuario
@@ -14,10 +13,8 @@ def limpar_log():
     system('clear')
 
 
-afDAO = AfirmacaoDAO('Olá')
-afDAO.adicionar_novo_campo('testando', 123)
-
 edgar = Edgar()
+limpar_log()
 bot_controller = BotController(edgar)
 nome_usuario = UsuarioController.get_nome()
 usuario = Usuario(nome_usuario)

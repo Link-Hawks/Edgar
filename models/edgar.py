@@ -1,11 +1,21 @@
+from os import system
+from pygame import init as iniciar_canto
+from pygame import mixer, time, event
+
 from chatterbot import ChatBot
 from chatterbot.conversation import Statement
 from chatterbot.trainers import ListTrainer
+
+from helpers.validacaohelper import ValidacaoHelper
 
 
 class Edgar:
 
     def __init__(self):
+
+        if not ValidacaoHelper.rodando('mongo'):
+            system('echo "x89FiaNB" | sudo -S systemctl start mongodb')
+
         self.__bot = ChatBot(
             name='Edgar',
             preprocessors=[
@@ -22,6 +32,7 @@ class Edgar:
         self.__resposta = None
         self.idade = 0
         self.treinado = False
+        self.sentenca_usuario = ''
 
     @property
     def bot(self):
@@ -37,17 +48,31 @@ class Edgar:
 
     def responda(self):
         if self.__resposta:
-            return f"Edgar: {self.__resposta}. Confiança {self.__resposta.confidence}. "
+            return f"{self.__resposta}."
         else:
             return "Não há afirmações a serem respondidas."
 
     def escute(self, sentenca):
         self.__resposta = self.__bot.generate_response(Statement(sentenca))
+        self.sentenca_usuario = sentenca
 
     def aprenda(self, resposta_valida, sentenca):
         self.__resposta = resposta_valida
         treinador_resposta_correta = ListTrainer(self.__bot)
         treinador_resposta_correta.train([sentenca, resposta_valida])
+
+    def cantar(self):
+        iniciar_canto()
+        mixer.music.load("./Sounds/music.mp3")
+        mixer.music.play()
+        mixer.music.set_volume(1)
+
+        clock = time.Clock()
+        clock.tick(10)
+
+        while mixer.music.get_busy():
+            event.poll()
+            clock.tick(10)
 
     @property
     def apresentacao(self):
