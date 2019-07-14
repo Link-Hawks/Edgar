@@ -6,6 +6,8 @@ from chatterbot import ChatBot
 from chatterbot.conversation import Statement
 from chatterbot.trainers import ListTrainer
 
+import speech_recognition as sr
+
 from helpers.validacaohelper import ValidacaoHelper
 
 

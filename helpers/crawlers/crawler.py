@@ -34,15 +34,14 @@ class Crawler:
         return elemento_pai.find_element_by_class_name(filho)
 
     def encerrar(self):
+        print('encerrando o navegador')
         self.driver.quit()
 
-crawler = Crawler()
-crawler.acessar('https://horriblesubs.info/shows/')\
-       .encontrar_link_texto('Enen no Shouboutai')\
-       .click()
-elemento = crawler.encontrar_filho('hs-shows', 'rls-info-container')
-elemento.click()
-elemento = elemento.find_element_by_class_name('link-1080p')
-magnet = re.search('href="(magnet:.+?)&amp.+?">', elemento.get_attribute('innerHTML')).group(1)
-system('deluge-console add '+magnet)
-crawler.encerrar()
+    def encontrar_torrent_magnet(self,elemento):
+        return re.search('href="(magnet:.+?)&amp.+?">', elemento.get_attribute('innerHTML')).group(1)
+
+    def adicionar_torrent(self, magnet_url):
+        system('deluge-console add '+magnet_url)
+
+    def encontrar_classe(self, classe, elemento):
+        return elemento.find_element_by_class_name(classe)
