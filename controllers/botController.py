@@ -55,12 +55,6 @@ class BotController:
 
     def escutar(self, afirmacao_usuario):
         self.__bot.escute(afirmacao_usuario)
-        if 'baixar anime' in afirmacao_usuario:
-            print('Digite o anime:\n')
-            anime = input('Você: ')
-            crawler = AnimeCrawler(anime)
-            qualidade = input('Digite a qualidade:\n')
-            crawler.baixar(qualidade)
 
         if 'cante' in afirmacao_usuario:
             self.__bot.cantar()

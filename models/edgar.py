@@ -16,7 +16,7 @@ class Edgar:
     def __init__(self):
 
         if not ValidacaoHelper.rodando('mongo'):
-            system('echo "x89FiaNB" | sudo -S systemctl start mongodb')
+            system('echo "senha" | sudo -S systemctl start mongodb')
 
         self.__bot = ChatBot(
             name='Edgar',
