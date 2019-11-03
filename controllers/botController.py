@@ -1,6 +1,6 @@
 from subprocess import check_output
 from shlex import quote
-from helpers.crawlers.animeCrawler import AnimeCrawler
+from helpers.crawlers.noticiasCrawler import NoticiasCrawler
 
 class BotController:
 
@@ -53,11 +53,36 @@ class BotController:
         resposta_edgar = afirmacao
         print(f"Edgar: {resposta_edgar}")
 
-    def escutar(self, afirmacao_usuario):
+    def escutar(self, afirmacao_usuario,usuario):
         self.__bot.escute(afirmacao_usuario)
 
         if 'cante' in afirmacao_usuario:
             self.__bot.cantar()
+
+        elif 'noticias' in afirmacao_usuario:
+            self.noticias()
+
+        else:
+            self.dialogo(usuario)
+
+    def noticias(self):
+        crawler = NoticiasCrawler()
+        noticias = crawler.buscar()
+        for i in range(len(noticias["conteudos"])):
+            try:
+                self.responder_por_texto(noticias["conteudos"][i].text)
+                self.responder_por_texto(noticias["titulos"][i].text)
+                self.responder_por_voz(noticias["conteudos"][i].text)
+            except: 
+                pass
+            print('\n')
+
+    def dialogo(self,usuario):
+        if usuario.quer_corrigir():
+            self.corrigir(usuario.ultima_afirmacao)
+        else:
+            self.responder()
+            self.feedback_resposta(usuario.afirmacao)
 
     def apresentar(self):
         print(self.__bot.apresentacao)

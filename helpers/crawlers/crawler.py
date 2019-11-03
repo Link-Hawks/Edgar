@@ -19,13 +19,16 @@ class Crawler:
         return webdriver.Firefox()
 
     def acessar(self, url):
-        print("Acessando: "+url)
         self.driver.get(url)
         return self
 
     def encontrar_link_texto(self,texto):
         print('procurando: '+texto)
         return self.driver.find_element_by_partial_link_text(texto)
+
+    def encontrar_elementos_classe(self,classe):
+        print('procurando: '+classe)
+        return self.driver.find_elements_by_class_name(classe)
 
     def encontrar_filho(self, pai, filho):
         print('procurando: '+filho)

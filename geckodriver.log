@@ -1,0 +1,90 @@
+1572798815425	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.siTwd4FnCzXJ"
+1572798824436	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1572798824436	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1572798824436	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1572798824436	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+
+(firefox:3330): GLib-GIO-WARNING **: 13:33:45.591: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+1572798831385	Marionette	INFO	Listening on port 44209
+1572798831415	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: https://s3.glbimg.com/cdn/libs/gui-lightbox/1.6.5/js/gui.lightbox.min.js, line 3: TypeError: "lightbox" is read-only
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: https://s3.glbimg.com/v1/AUTH_c631e406debd4c4fac98a09d48dc17d1/bastian-post/prod/g1/7f7ee310-66db/9ed37cf49cc692ca3c5866406df428a5.js, line 1061: TypeError: t[0] is undefined
+JavaScript error: https://tags.globo.com/utag/globo/g1/prod/utag.js, line 90: TypeError: elemDiv is undefined
+JavaScript error: https://tags.globo.com/utag/globo/g1/prod/utag.js, line 90: TypeError: elemDiv is undefined
+[Parent 3330, Gecko_IOThread] WARNING: pipe error (70): Connection reset by peer: file /build/src/firefox-69.0.1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 3330, Gecko_IOThread] WARNING: pipe error (130): Connection reset by peer: file /build/src/firefox-69.0.1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1572799543140	Marionette	INFO	Stopped listening on port 44209
+1572799558080	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.1OsqcheguUZT"
+1572799558433	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1572799558433	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1572799558433	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1572799558433	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+
+(firefox:3876): GLib-GIO-WARNING **: 13:45:58.560: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+1572799559716	Marionette	INFO	Listening on port 36381
+1572799559790	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: https://s3.glbimg.com/cdn/libs/gui-lightbox/1.6.5/js/gui.lightbox.min.js, line 3: TypeError: "lightbox" is read-only
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: https://s3.glbimg.com/v1/AUTH_c631e406debd4c4fac98a09d48dc17d1/bastian-post/prod/g1/7f7ee310-66db/9ed37cf49cc692ca3c5866406df428a5.js, line 1061: TypeError: t[0] is undefined
+Exiting due to channel error.
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x940004,name=PTexture::Msg_RecycleTexture) Channel error: cannot send/recv
+
+[Child 3972, Chrome_ChildThread] WARNING: pipe error (40): Connection reset by peer: file /build/src/firefox-69.0.1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x560004,name=PImageBridge::Msg_Update) Channel error: cannot send/recv
+
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1572799671988	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.jSB9vuYyesBS"
+1572799672338	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1572799672338	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1572799672338	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1572799672338	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+
+(firefox:4280): GLib-GIO-WARNING **: 13:47:52.461: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+1572799673618	Marionette	INFO	Listening on port 42615
+1572799673694	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: https://s3.glbimg.com/cdn/libs/gui-lightbox/1.6.5/js/gui.lightbox.min.js, line 3: TypeError: "lightbox" is read-only
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: https://s3.glbimg.com/v1/AUTH_c631e406debd4c4fac98a09d48dc17d1/bastian-post/prod/g1/7f7ee310-66db/9ed37cf49cc692ca3c5866406df428a5.js, line 1061: TypeError: t[0] is undefined
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1572799820737	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.nvLsJ7gx4rW0"
+1572799821152	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1572799821152	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1572799821152	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1572799821153	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+
+(firefox:4728): GLib-GIO-WARNING **: 13:50:21.286: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+1572799822573	Marionette	INFO	Listening on port 43849
+1572799822673	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: https://s3.glbimg.com/cdn/libs/gui-lightbox/1.6.5/js/gui.lightbox.min.js, line 3: TypeError: "lightbox" is read-only
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: https://s3.glbimg.com/v1/AUTH_c631e406debd4c4fac98a09d48dc17d1/bastian-post/prod/g1/7f7ee310-66db/9ed37cf49cc692ca3c5866406df428a5.js, line 1061: TypeError: t[0] is undefined
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1572799991943	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.5JZlzh3sMuKE"
+1572799992321	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1572799992321	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1572799992321	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1572799992321	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+
+(firefox:5303): GLib-GIO-WARNING **: 13:53:12.451: /etc/xdg/kde-mimeapps.list contains a [Added Associations] group, but it is not permitted here.  Only the non-desktop-specific mimeapps.list file may add or remove associations.
+1572799993633	Marionette	INFO	Listening on port 37671
+1572799993650	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: https://s3.glbimg.com/cdn/libs/gui-lightbox/1.6.5/js/gui.lightbox.min.js, line 3: TypeError: "lightbox" is read-only
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: https://s3.glbimg.com/v1/AUTH_c631e406debd4c4fac98a09d48dc17d1/bastian-post/prod/g1/7f7ee310-66db/9ed37cf49cc692ca3c5866406df428a5.js, line 1061: TypeError: t[0] is undefined
+JavaScript error: https://tags.globo.com/utag/globo/g1/prod/utag.js, line 90: TypeError: elemDiv is undefined
+JavaScript error: https://tags.globo.com/utag/globo/g1/prod/utag.js, line 90: TypeError: elemDiv is undefined

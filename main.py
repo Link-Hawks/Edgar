@@ -12,7 +12,6 @@ def limpar_log():
     logger.setLevel(logging.CRITICAL)
     system('clear')
 
-
 edgar = Edgar()
 limpar_log()
 bot_controller = BotController(edgar)
@@ -26,10 +25,5 @@ bot_controller.apresentar()
 while not usuario.quer_sair:
     usuario_controller.get_afirmacao()
     if not usuario.quer_sair:
-        bot_controller.escutar(usuario.afirmacao)
+        bot_controller.escutar(usuario.afirmacao, usuario)
 
-        if usuario.quer_corrigir():
-            bot_controller.corrigir(usuario.ultima_afirmacao)
-        else:
-            bot_controller.responder()
-            bot_controller.feedback_resposta(usuario.afirmacao)
