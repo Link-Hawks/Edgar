@@ -10,7 +10,7 @@ from controllers.usuarioController import UsuarioController
 def limpar_log():
     logger = logging.getLogger()
     logger.setLevel(logging.CRITICAL)
-    system('clear')
+    system('cls')
 
 edgar = Edgar()
 limpar_log()

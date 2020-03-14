@@ -36,7 +36,7 @@ class BotController:
 
         # Finally não funciona.
         try:
-            self.responder_por_voz(afirmacao)
+            # self.responder_por_voz(afirmacao)
             self.responder_por_texto(afirmacao)
         except:
             self.responder_por_texto(afirmacao)

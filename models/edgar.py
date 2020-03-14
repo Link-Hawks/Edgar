@@ -15,8 +15,8 @@ class Edgar:
 
     def __init__(self):
 
-        if not ValidacaoHelper.rodando('mongo'):
-            system('echo "x89FiaNB" | sudo -S systemctl start mongodb')
+        # if not ValidacaoHelper.rodando('mongo'):
+            # system('echo "x89FiaNB" | sudo -S systemctl start mongodb')
 
         self.__bot = ChatBot(
             name='Edgar',
@@ -50,7 +50,7 @@ class Edgar:
 
     def responda(self):
         if self.__resposta:
-            return f"{self.__resposta}."
+            return f"{self.__resposta}"
         else:
             return "Não há afirmações a serem respondidas."
 

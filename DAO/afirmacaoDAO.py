@@ -33,8 +33,8 @@ class AfirmacaoDAO:
 
     # Metodo a ser deletado após implementação da classe de conexão
     def _get_banco(self):
-        if not ValidacaoHelper.rodando('mongo'):
-            self._start_mongo_service()
+        # if not ValidacaoHelper.rodando('mongo'):
+            # self._start_mongo_service()
         cliente = MongoClient('127.0.0.1', 27017)
         db = cliente['chatterbot-database']
         return db

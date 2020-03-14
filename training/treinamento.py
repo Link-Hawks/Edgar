@@ -1,3 +1,6 @@
+import sys
+sys.path.append("..")
+
 from models.edgar import Edgar
 from chatterbot.trainers import ListTrainer
 from chatterbot.trainers import ChatterBotCorpusTrainer
