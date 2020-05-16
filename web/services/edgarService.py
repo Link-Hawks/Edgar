@@ -12,23 +12,30 @@ class EdgarService:
         resposta = {
             'resposta': resposta_edgar,
             'afirmação': afirmacao_usuario,
-            'confiança': edgar.resposta.confidence,
+            'confianca': edgar.resposta.confidence,
             'hora': datetime.utcnow()
         }
         return resposta
 
     def responder_json(self, afirmacao_usuario):
-        str_resposta = json.dumps(self.resposta(afirmacao_usuario),indent=4, sort_keys=True, default=str,ensure_ascii = False)
+        resposta  = self.responder(afirmacao_usuario)
+        
+        if float(resposta["confianca"]) < 0.7:
+            resposta["resposta"] = "Eu não sei responder a isto"
+
+        str_resposta = json.dumps(resposta,indent=4, sort_keys=True, default=str,ensure_ascii = False)
         return str_resposta
 
     def corrigir(self, afirmacao_usuario, resposta_valida):
         edgar = Edgar()
         edgar.aprenda(resposta_valida, afirmacao_usuario)
+
+    def aprender(self,  afirmacao_usuario, resposta_valida):
+        self.corrigir(afirmacao_usuario, resposta_valida)
         return json.dumps ({
             'resposta': resposta_valida,
             'afirmação': afirmacao_usuario,
             'confiança': 1.0,
             'hora': datetime.utcnow()
         },indent=4, sort_keys=True, default=str,ensure_ascii = False)
-
 

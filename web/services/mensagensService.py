@@ -18,6 +18,10 @@ class MensagensService:
         mensagem['time'] = dateutil.parser.parse(mensagem['time'])
         self._dao.insert(mensagem)
         resposta = self._botService.responder(mensagem['message'])
+        if float(resposta["confianca"]) < 0.7:
+            resposta["resposta"] = "não sei"
+        print(resposta["confianca"])
+        print(float(resposta["confianca"]))
         mensagem_bot = {
             "message": resposta["resposta"],
             "to": mensagem["from"],

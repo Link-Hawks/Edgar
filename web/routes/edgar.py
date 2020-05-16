@@ -51,12 +51,13 @@ def conversar():
         return resposta
 
 @app.route('/api/edgar', methods=['PUT'])
-def corrigir():
+def aprender():
     if request.method == 'PUT':
-        afirmacao_usuario = request.json['afirmacao_usuario']
-        resposta_correcao = request.json['resposta_correcao']
+        afirmacao_usuario = request.json['user_statement']
+        resposta_correcao = request.json['edgar_correct_message']
         service = EdgarService()
-        return service.corrigir(afirmacao_usuario, resposta_correcao)
+        return service.aprender(afirmacao_usuario, resposta_correcao)
+
 
 @app.route('/api/mensagens', methods=['GET'])
 def buscar_mensagens():
@@ -69,4 +70,3 @@ def responder_mensagens():
     print("enviando post")
     service = MensagensService()
     return service.responder(request.json)
-

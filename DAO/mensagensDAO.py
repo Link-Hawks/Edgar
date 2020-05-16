@@ -8,6 +8,7 @@ class MensagensDAO:
     _mensagensCollection = SingletonConnection.get_collection('messages','messages')
 
     def buscar(self, usuario):
+        print(usuario)
         usuario_id = usuario
         if usuario != 0:
             usuario_id = ObjectId(usuario)

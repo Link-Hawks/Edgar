@@ -8,6 +8,7 @@ class AuthService:
 
     def _autenticar(self, email, senha):
         users = SingletonConnection.get_collection("users", "messages")
+        print(hashlib.md5(f"{SECRET_KEY}link20256800{SECRET_KEY}".encode()).hexdigest())
         user = users.find_one({"email": email, "authToken":hashlib.md5(f"{SECRET_KEY}{senha}{SECRET_KEY}".encode()).hexdigest()})
         return user
         
