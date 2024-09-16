@@ -30,6 +30,9 @@ class AfirmacaoDAO:
     def alterar(self, nova_afirmacao):
         statements = self._get_collection("statements")
         statements.update({"_id": self.id}, {"$set": {"text": nova_afirmacao}})
+    
+    def remover(self):
+        self.statements.remove({'id': self.id})
 
     # Metodo a ser deletado após implementação da classe de conexão
     def _get_banco(self):
